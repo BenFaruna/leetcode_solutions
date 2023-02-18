@@ -21,24 +21,20 @@ class Solution:
             width += 1
         return max_area
 
-    def max_area_list(self, heights: List[int]) -> List[int]:
-        """returns a list containing the maximum area convered from each height"""
-        max_area_covered = []
-
-        i = 0
-        while i < (len(heights) - 1):
-            current_i = heights[i]
-            subsequent_heights = heights[i + 1:]
-            max_area_covered.append(self.max_water(current_i, subsequent_heights))
-            i += 1
-        return max_area_covered
-
     def maxArea(self, height: List[int]) -> int:
         """final solution that return the largest area water can occupy
         within the line heights"""
-        max_area_covered = self.max_area_list(height)
-        max_area = 0
-        for area in max_area_covered:
-            if area > max_area:
-                max_area = area
-        return max_area
+        max_area_covered = 0
+
+        i = 0
+        while i < (len(height) - 1):
+            current_i = height[i]
+            subsequent_heights = height[i + 1:]
+            area_covered = self.max_water(current_i, subsequent_heights)
+
+            if area_covered > max_area_covered:
+                max_area_covered = area_covered
+
+            i += 1
+
+        return max_area_covered
