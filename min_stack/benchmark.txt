@@ -1,0 +1,46 @@
+goos: linux
+goarch: amd64
+pkg: min_stack
+cpu: 12th Gen Intel(R) Core(TM) i7-1265U
+BenchmarkMinStackLen-12    	1000000000	         0.1108 ns/op	       0 B/op	       0 allocs/op
+BenchmarkMinStackLen-12    	1000000000	         0.1094 ns/op	       0 B/op	       0 allocs/op
+BenchmarkMinStackLen-12    	1000000000	         0.1082 ns/op	       0 B/op	       0 allocs/op
+BenchmarkMinStackLen-12    	1000000000	         0.1194 ns/op	       0 B/op	       0 allocs/op
+BenchmarkMinStackLen-12    	1000000000	         0.1066 ns/op	       0 B/op	       0 allocs/op
+BenchmarkMinStackLen-12    	1000000000	         0.1073 ns/op	       0 B/op	       0 allocs/op
+BenchmarkMinStackLen-12    	1000000000	         0.1089 ns/op	       0 B/op	       0 allocs/op
+BenchmarkMinStackLen-12    	1000000000	         0.1080 ns/op	       0 B/op	       0 allocs/op
+BenchmarkMinStackLen-12    	1000000000	         0.1067 ns/op	       0 B/op	       0 allocs/op
+BenchmarkMinStackLen-12    	1000000000	         0.1078 ns/op	       0 B/op	       0 allocs/op
+BenchmarkMinStackMin-12    	1000000000	         0.1065 ns/op	       0 B/op	       0 allocs/op
+BenchmarkMinStackMin-12    	1000000000	         0.1076 ns/op	       0 B/op	       0 allocs/op
+BenchmarkMinStackMin-12    	1000000000	         0.1116 ns/op	       0 B/op	       0 allocs/op
+BenchmarkMinStackMin-12    	1000000000	         0.1266 ns/op	       0 B/op	       0 allocs/op
+BenchmarkMinStackMin-12    	1000000000	         0.1081 ns/op	       0 B/op	       0 allocs/op
+BenchmarkMinStackMin-12    	1000000000	         0.1174 ns/op	       0 B/op	       0 allocs/op
+BenchmarkMinStackMin-12    	1000000000	         0.1084 ns/op	       0 B/op	       0 allocs/op
+BenchmarkMinStackMin-12    	1000000000	         0.1126 ns/op	       0 B/op	       0 allocs/op
+BenchmarkMinStackMin-12    	1000000000	         0.1085 ns/op	       0 B/op	       0 allocs/op
+BenchmarkMinStackMin-12    	1000000000	         0.1121 ns/op	       0 B/op	       0 allocs/op
+BenchmarkStackLen-12       	838592208	         1.564 ns/op	       0 B/op	       0 allocs/op
+BenchmarkStackLen-12       	705542620	         1.563 ns/op	       0 B/op	       0 allocs/op
+BenchmarkStackLen-12       	763671212	         1.421 ns/op	       0 B/op	       0 allocs/op
+BenchmarkStackLen-12       	658991407	         2.552 ns/op	       0 B/op	       0 allocs/op
+BenchmarkStackLen-12       	783402468	         1.427 ns/op	       0 B/op	       0 allocs/op
+BenchmarkStackLen-12       	787481308	         1.416 ns/op	       0 B/op	       0 allocs/op
+BenchmarkStackLen-12       	861705210	         1.398 ns/op	       0 B/op	       0 allocs/op
+BenchmarkStackLen-12       	766087830	         1.406 ns/op	       0 B/op	       0 allocs/op
+BenchmarkStackLen-12       	782779987	         1.429 ns/op	       0 B/op	       0 allocs/op
+BenchmarkStackLen-12       	822029620	         1.515 ns/op	       0 B/op	       0 allocs/op
+BenchmarkStackMin-12       	896076330	         1.384 ns/op	       0 B/op	       0 allocs/op
+BenchmarkStackMin-12       	882890881	         1.310 ns/op	       0 B/op	       0 allocs/op
+BenchmarkStackMin-12       	875894397	         1.342 ns/op	       0 B/op	       0 allocs/op
+BenchmarkStackMin-12       	910966028	         1.391 ns/op	       0 B/op	       0 allocs/op
+BenchmarkStackMin-12       	928583343	         1.357 ns/op	       0 B/op	       0 allocs/op
+BenchmarkStackMin-12       	879862586	         1.285 ns/op	       0 B/op	       0 allocs/op
+BenchmarkStackMin-12       	884809666	         1.340 ns/op	       0 B/op	       0 allocs/op
+BenchmarkStackMin-12       	935839746	         1.471 ns/op	       0 B/op	       0 allocs/op
+BenchmarkStackMin-12       	834664698	         1.400 ns/op	       0 B/op	       0 allocs/op
+BenchmarkStackMin-12       	910898655	         1.442 ns/op	       0 B/op	       0 allocs/op
+PASS
+ok  	min_stack	30.705s

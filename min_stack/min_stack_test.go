@@ -132,3 +132,17 @@ func setupMinStack() MinStack[int] {
 	}
 	return stack
 }
+
+func BenchmarkMinStackLen(b *testing.B) {
+	stack := setupMinStack()
+	for i := 0; i < b.N; i++ {
+		stack.Len()
+	}
+}
+
+func BenchmarkMinStackMin(b *testing.B) {
+	stack := setupMinStack()
+	for i := 0; i < b.N; i++ {
+		stack.Min()
+	}
+}
