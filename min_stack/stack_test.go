@@ -19,8 +19,8 @@ func TestStack(t *testing.T) {
 	t.Run("stack len test", func(t *testing.T) {
 		stack := &Stack[int]{}
 
-		if stack.Len != 0 {
-			t.Logf("stack len is %d, want 0", stack.Len)
+		if stack.Len() != 0 {
+			t.Logf("stack len is %d, want 0", stack.Len())
 		}
 
 		stack.Push(5)
@@ -28,8 +28,8 @@ func TestStack(t *testing.T) {
 		stack.Push(5)
 		stack.Push(5)
 
-		if stack.Len != 4 {
-			t.Logf("stack len is %d, want 1", stack.Len)
+		if stack.Len() != 4 {
+			t.Logf("stack len is %d, want 1", stack.Len())
 		}
 	})
 
@@ -40,8 +40,8 @@ func TestStack(t *testing.T) {
 		stack.Push(3)
 		stack.Push(13)
 
-		if stack.Len != 3 {
-			t.Logf("stack len is %d, want 3", stack.Len)
+		if stack.Len() != 3 {
+			t.Logf("stack len is %d, want 3", stack.Len())
 		}
 
 		top, _ := stack.Top()
@@ -54,14 +54,14 @@ func TestStack(t *testing.T) {
 		stack := setupStack()
 
 		for i := 0; i < 5; i++ {
-			length := stack.Len
+			length := stack.Len()
 			top, _ := stack.Top()
 			pop, _ := stack.Pop()
 			if top != pop {
 				t.Logf("want %d, got %d", top, pop)
 			}
-			if (length - 1) != stack.Len {
-				t.Errorf("old stack length is %d, and new stack length is %d", length, stack.Len)
+			if (length - 1) != stack.Len() {
+				t.Errorf("old stack length is %d, and new stack length is %d", length, stack.Len())
 			}
 		}
 	})
@@ -98,7 +98,7 @@ func TestStack(t *testing.T) {
 
 	t.Run("stack min test", func(t *testing.T) {
 		stack := setupStack()
-		minimum, _ := stack.IterMin()
+		minimum, _ := stack.Min()
 		if minimum != 10 {
 			t.Errorf("want 10, got %d", minimum)
 		}
@@ -107,7 +107,7 @@ func TestStack(t *testing.T) {
 	t.Run("stack test min on empty stack", func(t *testing.T) {
 		stack := &Stack[int]{}
 
-		value, err := stack.IterMin()
+		value, err := stack.Min()
 		if err == nil {
 			t.Errorf("want error, got nil")
 		}
